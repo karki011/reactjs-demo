@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Projects from './Components/Projects';
+import AddProject from './Components/AddProject';
 import './App.css';
+
 class App extends Component {
   constructor (){
     super();
@@ -13,22 +15,22 @@ class App extends Component {
     this.setState({projects: [
       {
         title: "Business Development",
-        Description: "Web Design"
+        Categories: "Web Design"
       },
       {
         title: "Social Media",
-        Description: "Marketing"
+        Categories: "Marketing"
       },
       {
         title: "Shoping Cart",
-        Description: "Plan and subcription"
+        Categories: "Plan and subcription"
       }
     ]})
   }
   render() {
     return (
       <div className="App">
-
+        <AddProject />
         <Projects projects={this.state.projects} />
       </div>
     );
